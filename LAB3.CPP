@@ -61,21 +61,21 @@ void print(int offset, int val)
 
 void get_reg()
 {
- print(0, inp(0x21));
+print(0, inp(0x21)); //вывод регистра масок ведущего
 
- outp(0x20, 0x0A);
- print(32, inp(0x20));
+outp(0x20, 0x0A); // вывод регистра запросов 
+print(32, inp(0x20));
 
- outp(0x20, 0x0B);
- print(16, inp(0x20));
+outp(0x20, 0x0B);
+print(16, inp(0x20));
 
- print(48, inp(0xA1));
+print(48, inp(0xA1));
 
- outp(0xA0, 0x0A);
- print(80, inp(0xA0));
+outp(0xA0, 0x0A);
+print(80, inp(0xA0));
 
- outp(0xA0, 0x0B);
- print(64, inp(0xA0));
+outp(0xA0, 0x0B);
+print(64, inp(0xA0));
 }
 
 void interrupt new08(...)
